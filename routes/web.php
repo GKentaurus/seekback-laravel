@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Cliente;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
+});
+
+Route::get('test', function () {
+  return Cliente::all()->where('idCliente', 1)->first()->idCliente;
 });

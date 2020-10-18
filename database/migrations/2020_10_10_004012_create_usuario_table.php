@@ -21,9 +21,7 @@ class CreateUsuarioTable extends Migration
       $table->string('sApellido');
       $table->foreignId('tipoDoc')->constrained('tipo_doc', 'idTipoDoc');
       $table->string('numeroDoc');
-      $table->string('email');
       $table->string('contrasena');
-      $table->string('telefPpal');
       $table->foreignId('rol')->constrained('roles', 'idRol');
       $table->timestamps();
       $table->softDeletes();

@@ -12,6 +12,8 @@ return [
   'departamento' => 10,
   'ciudad' => 20,
   'direcciones' => 20,
+  'correos' => 20,
+  'telefonos' => 20,
   'proveedor' => 20,
   'divisas' => 0,
   'trm' => 100,
@@ -28,4 +30,5 @@ return [
   'pqrs' => 20,
   'felicitacion' => 30,
   'calificacion' => 1000,
+  'agenda' => 30,
 ];

@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
       RolesSeeder::class,
       UsuarioSeeder::class,
       DireccionesSeeder::class,
+      CorreosSeeder::class,
+      TelefonosSeeder::class,
       AdministradorSeeder::class,
       EmpleadoSeeder::class,
       ClienteSeeder::class,
@@ -42,6 +44,9 @@ class DatabaseSeeder extends Seeder
       PQRSSeeder::class,
       FelicitacionSeeder::class,
       CalificacionSeeder::class,
+      TipoServicioSeeder::class,
+      EstadoAgendaSeeder::class,
+      AgendaSeeder::class,
     ]);
   }
 }

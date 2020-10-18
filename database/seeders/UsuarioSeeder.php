@@ -22,9 +22,7 @@ class UsuarioSeeder extends Seeder
         'sApellido' => 'Rocha',
         'tipoDoc' => 1,
         'numeroDoc' => '1019111222',
-        'email' => 'veronica@example.com',
         'contrasena' => '123456',
-        'telefPpal' => '3001112233',
         'rol' => 1,
       ],
       [
@@ -34,9 +32,7 @@ class UsuarioSeeder extends Seeder
         'sApellido' => 'Huertas',
         'tipoDoc' => 1,
         'numeroDoc' => '1020111222',
-        'email' => 'danniela@example.com',
         'contrasena' => '123456',
-        'telefPpal' => '3001113344',
         'rol' => 1,
       ],
       [
@@ -46,9 +42,7 @@ class UsuarioSeeder extends Seeder
         'sApellido' => 'Cifuentes',
         'tipoDoc' => 1,
         'numeroDoc' => '1021111222',
-        'email' => 'carlos@example.com',
         'contrasena' => '123456',
-        'telefPpal' => '3001114455',
         'rol' => 1,
       ],
     ];

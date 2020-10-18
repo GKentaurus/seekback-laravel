@@ -17,8 +17,7 @@ class CreateDireccionesTable extends Migration
       $table->bigIncrements('idDirecciones');
       $table->foreignId('idRegistro')->constrained('usuario', 'idUsuario');
       $table->string('pseudonimo');
-      $table->string('dirLinea1');
-      $table->string('dirLinea2');
+      $table->string('direccion');
       $table->string('telefono');
       $table->foreignId('localizacion')->constrained('ciudad', 'idCiudad');
       $table->timestamps();

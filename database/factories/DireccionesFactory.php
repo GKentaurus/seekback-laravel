@@ -24,8 +24,7 @@ class DireccionesFactory extends Factory
     return [
       'idRegistro' => $this->faker->numberBetween(1, config('seeder.usuarios')),
       'pseudonimo' => $this->faker->word(),
-      'dirLinea1' => $this->faker->address,
-      'dirLinea2' => $this->faker->secondaryAddress,
+      'direccion' => $this->faker->address,
       'telefono' => $this->faker->e164PhoneNumber,
       'localizacion' => $this->faker->numberBetween(1, config('seeder.ciudad')),
     ];

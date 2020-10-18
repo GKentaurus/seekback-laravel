@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Administrador;
+use App\Models\Correos;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AdministradorFactory extends Factory
+class CorreosFactory extends Factory
 {
   /**
    * The name of the factory's corresponding model.
    *
    * @var string
    */
-  protected $model = Administrador::class;
+  protected $model = Correos::class;
 
   /**
    * Define the model's default state.
@@ -22,7 +22,9 @@ class AdministradorFactory extends Factory
   public function definition()
   {
     return [
-      //
+      'idUsuario' => $this->faker->numberBetween(1, config('seeder.usuarios')),
+      'correoElectronico' => $this->faker->safeEmail,
+      'esPrincipal' => true,
     ];
   }
 }

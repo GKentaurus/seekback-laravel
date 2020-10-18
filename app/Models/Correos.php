@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
 
-class Direcciones extends Model
+class Correos extends Model
 {
-  use HasFactory, SoftDeletes;
+  use HasFactory, Notifiable, SoftDeletes;
 
-  protected $table = 'direcciones';
+  protected $table = 'correos';
 
   protected $fillable = [
-    'idRegistro',
-    'pseudonimo',
-    'direccion',
-    'telefono',
-    'localizacion',
+    'idUsuario',
+    'correoElectronico',
+    'esPrincipal'
   ];
 }

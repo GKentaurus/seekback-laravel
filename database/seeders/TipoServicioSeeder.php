@@ -14,17 +14,17 @@ class TipoServicioSeeder extends Seeder
    */
   public function run()
   {
-    $tipos  = [
+    $servicios  = [
       [
-        'Capacitación'
+        'nombreServicio' => 'Aprobado'
       ],
       [
-        'Asesoría'
+        'nombreServicio' => 'Aplazado'
       ],
     ];
 
-    for ($i = 0; $i < count($tipos); $i++) {
-      TipoServicio::factory()->create($tipos[$i]);
+    for ($i = 0; $i < count($servicios); $i++) {
+      TipoServicio::factory()->create($servicios[$i]);
     }
   }
 }

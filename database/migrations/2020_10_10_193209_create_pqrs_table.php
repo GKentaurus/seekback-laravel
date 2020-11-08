@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreatePQRSTable extends Migration
 {
@@ -18,7 +19,8 @@ class CreatePQRSTable extends Migration
       $table->foreignId('idTipoSolicitud')->constrained('tipo_solicitud', 'idTipoSolicitud');
       $table->string('area');
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');
-      $table->timestamps();
+      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();
     });
   }

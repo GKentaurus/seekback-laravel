@@ -16,16 +16,16 @@ class EstadoAgendaSeeder extends Seeder
   {
     $estados  = [
       [
-        'Aprobado'
+        'nombreEstado' => 'Aprobado'
       ],
       [
-        'Aplazadp'
+        'nombreEstado' => 'Aplazado'
       ],
       [
-        'Cancelado'
+        'nombreEstado' => 'Cancelado'
       ],
       [
-        'Finalizado'
+        'nombreEstado' => 'Finalizado'
       ],
     ];
 

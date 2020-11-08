@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Direcciones;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DireccionesSeeder extends Seeder
 {

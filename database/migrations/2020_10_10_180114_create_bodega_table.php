@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateBodegaTable extends Migration
 {
@@ -16,7 +17,8 @@ class CreateBodegaTable extends Migration
     Schema::create('bodega', function (Blueprint $table) {
       $table->bigIncrements('idBodega');
       $table->string('nombreBodega');
-      $table->timestamps();
+      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();
     });
   }

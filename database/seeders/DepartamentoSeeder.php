@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Departamento;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DepartamentoSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class DepartamentoSeeder extends Seeder
    */
   public function run()
   {
-    Departamento::factory()->times(config('seeder.departamento'))->create();
+    DB::unprepared(file_get_contents('database/migrations/departamento.sql'));
+    // Departamento::factory()->times(config('seeder.departamento'))->create();
   }
 }

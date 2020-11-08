@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Pais;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PaisSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class PaisSeeder extends Seeder
    */
   public function run()
   {
-    Pais::factory()->times(config('seeder.pais'))->create();
+    DB::unprepared(file_get_contents('database/migrations/pais.sql'));
+    // Pais::factory()->times(config('seeder.pais'))->create();
   }
 }

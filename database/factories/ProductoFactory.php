@@ -23,7 +23,7 @@ class ProductoFactory extends Factory
   public function definition()
   {
     return [
-      'modeloProducto' => ($this->faker->firstName() . $this->faker->lastName()),
+      'modeloProducto' => ($this->faker->word() . $this->faker->word() . $this->faker->word()),
       'descripcion' => $this->faker->paragraph(1),
       'precioVenta' => ($this->faker->numberBetween(10, 300)) * 1000,
       'idCategoria' => $this->faker->numberBetween(1, CategoriasProducto::all()->count()),

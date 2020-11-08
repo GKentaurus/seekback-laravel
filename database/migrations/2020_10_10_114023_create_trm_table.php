@@ -15,7 +15,7 @@ class CreateTRMTable extends Migration
   {
     Schema::create('trm', function (Blueprint $table) {
       $table->bigIncrements('idTRM');
-      $table->string('idDivisa');
+      $table->foreignId('idDivisa')->constrained('divisas', 'idDivisa');
       $table->date('fechaTRM');
       $table->double('tasaCambio');
       $table->timestamps();

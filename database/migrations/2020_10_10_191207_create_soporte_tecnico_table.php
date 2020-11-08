@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateSoporteTecnicoTable extends Migration
 {
@@ -17,7 +18,8 @@ class CreateSoporteTecnicoTable extends Migration
       $table->bigIncrements('idSoporteTecnico');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');
-      $table->timestamps();
+      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();
     });
   }

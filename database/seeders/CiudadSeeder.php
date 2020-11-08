@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Ciudad;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CiudadSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class CiudadSeeder extends Seeder
    */
   public function run()
   {
-    Ciudad::factory()->times(config('seeder.ciudad'))->create();
+    DB::unprepared(file_get_contents('database/migrations/ciudad.sql'));
+    // Ciudad::factory()->times(config('seeder.ciudad'))->create();
   }
 }

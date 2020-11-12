@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class tipoDoc extends Model
+class TipoDoc extends Model
 {
   use HasFactory, SoftDeletes;
 

@@ -20,7 +20,7 @@ class CreateCotizacionTable extends Migration
       $table->date('fecha');
       $table->date('vencimiento');
       $table->foreignId('idTRM')->constrained('trm', 'idTRM');
-      $table->foreignId('idEstado')->constrained('estados_cotizacion', 'idEstadoCotizacion');
+      $table->foreignId('idEstado')->constrained('estados_cotizacion', 'idEstado');
       $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');
       $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
       FelicitacionSeeder::class,
       CalificacionSeeder::class,
       TipoServicioSeeder::class,
-      EstadoAgendaSeeder::class,
+      EstadosAgendaSeeder::class,
       AgendaSeeder::class,
     ]);
   }

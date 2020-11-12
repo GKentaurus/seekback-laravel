@@ -18,7 +18,7 @@ class CreateAgendaTable extends Migration
       $table->bigIncrements('idAgenda');
       $table->date('fecha');
       $table->string('observaciones');
-      $table->foreignId('idEstado')->constrained('estado_agenda', 'idEstado');
+      $table->foreignId('idEstado')->constrained('estados_agenda', 'idEstado');
       $table->foreignId('idTipoServicio')->constrained('tipo_servicio', 'idTipoServicio');
       $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');

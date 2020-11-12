@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\TipoDoc;
+use App\Models\EstadosAgenda;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TipoDocFactory extends Factory
+class EstadosAgendaFactory extends Factory
 {
   /**
    * The name of the factory's corresponding model.
    *
    * @var string
    */
-  protected $model = TipoDoc::class;
+  protected $model = EstadosAgenda::class;
 
   /**
    * Define the model's default state.
@@ -22,8 +22,7 @@ class TipoDocFactory extends Factory
   public function definition()
   {
     return [
-      'sigla' => $this->faker->word(),
-      'nombreDocument' => $this->faker->paragraph(1),
+      //
     ];
   }
 }

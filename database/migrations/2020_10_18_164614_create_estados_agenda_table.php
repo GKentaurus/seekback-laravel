@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstadoAgendaTable extends Migration
+class CreateEstadosAgendaTable extends Migration
 {
   /**
    * Run the migrations.
@@ -14,7 +14,7 @@ class CreateEstadoAgendaTable extends Migration
    */
   public function up()
   {
-    Schema::create('estado_agenda', function (Blueprint $table) {
+    Schema::create('estados_agenda', function (Blueprint $table) {
       $table->bigIncrements('idEstado');
       $table->string('nombreEstado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

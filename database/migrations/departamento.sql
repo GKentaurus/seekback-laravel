@@ -15,7 +15,7 @@
 CREATE TABLE IF NOT EXISTS `departamento` (
   `idDepartamento` bigint unsigned NOT NULL AUTO_INCREMENT,
   `idPais` bigint unsigned NOT NULL,
-  `nombreDepartament` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombreDepartamento` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `departamento` (
 
 -- Volcando datos para la tabla seekback.departamento: ~4.091 rows (aproximadamente)
 /*!40000 ALTER TABLE `departamento` DISABLE KEYS */;
-INSERT INTO `departamento` (`idDepartamento`, `idPais`, `nombreDepartament`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `departamento` (`idDepartamento`, `idPais`, `nombreDepartamento`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 101, 'AndamanandNicobarIslands', '2020-11-08 15:25:03', '2020-11-08 17:02:47', NULL),
 	(2, 101, 'AndhraPradesh', '2020-11-08 15:25:03', '2020-11-08 17:02:47', NULL),
 	(3, 101, 'ArunachalPradesh', '2020-11-08 15:25:03', '2020-11-08 17:02:47', NULL),

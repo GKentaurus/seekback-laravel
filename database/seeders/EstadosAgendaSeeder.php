@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\EstadoAgenda;
+use App\Models\EstadosAgenda;
 use Illuminate\Database\Seeder;
 
-class EstadoAgendaSeeder extends Seeder
+class EstadosAgendaSeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -30,7 +30,7 @@ class EstadoAgendaSeeder extends Seeder
     ];
 
     for ($i = 0; $i < count($estados); $i++) {
-      EstadoAgenda::factory()->create($estados[$i]);
+      EstadosAgenda::factory()->create($estados[$i]);
     }
   }
 }

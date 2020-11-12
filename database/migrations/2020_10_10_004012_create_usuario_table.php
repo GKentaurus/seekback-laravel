@@ -16,12 +16,12 @@ class CreateUsuarioTable extends Migration
   {
     Schema::create('usuario', function (Blueprint $table) {
       $table->bigIncrements('idUsuario');
-      $table->string('pNombre');
-      $table->string('sNombres');
-      $table->string('pApellido');
-      $table->string('sApellido');
+      $table->string('pNombre', 50);
+      $table->string('sNombres', 50)->nullable();
+      $table->string('pApellido', 50);
+      $table->string('sApellido', 50)->nullable();
       $table->foreignId('tipoDoc')->constrained('tipo_doc', 'idTipoDoc');
-      $table->string('numeroDoc');
+      $table->string('numeroDoc', 50);
       $table->string('contrasena');
       $table->foreignId('rol')->constrained('roles', 'idRol');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

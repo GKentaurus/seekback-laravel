@@ -16,8 +16,8 @@ class CreateTipoDocTable extends Migration
   {
     Schema::create('tipo_doc', function (Blueprint $table) {
       $table->bigIncrements('idTipoDoc');
-      $table->string('sigla');
-      $table->string('nombreDocument');
+      $table->string('sigla', 5);
+      $table->string('nombreDocumento', 20);
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

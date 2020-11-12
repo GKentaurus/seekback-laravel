@@ -17,7 +17,7 @@ class CreateTelefonosTable extends Migration
     Schema::create('telefonos', function (Blueprint $table) {
       $table->bigIncrements('idTelefono');
       $table->foreignId('idUsuario')->constrained('usuario', 'idUsuario');
-      $table->string('numeroTelefono');
+      $table->string('numeroTelefono', 20);
       $table->boolean('esPrincipal');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

@@ -17,9 +17,9 @@ class CreateDireccionesTable extends Migration
     Schema::create('direcciones', function (Blueprint $table) {
       $table->bigIncrements('idDirecciones');
       $table->foreignId('idRegistro')->constrained('usuario', 'idUsuario');
-      $table->string('pseudonimo');
-      $table->string('direccion');
-      $table->string('telefono');
+      $table->string('pseudonimo', 30);
+      $table->string('direccion', 100);
+      $table->string('telefono', 20);
       $table->foreignId('localizacion')->constrained('ciudad', 'idCiudad');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

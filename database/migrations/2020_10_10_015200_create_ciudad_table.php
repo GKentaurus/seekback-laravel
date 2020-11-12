@@ -17,7 +17,7 @@ class CreateCiudadTable extends Migration
     Schema::create('ciudad', function (Blueprint $table) {
       $table->bigIncrements('idCiudad');
       $table->foreignId('idDepartamento')->constrained('departamento', 'idDepartamento');
-      $table->string('nombreCiudad');
+      $table->string('nombreCiudad', 50);
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

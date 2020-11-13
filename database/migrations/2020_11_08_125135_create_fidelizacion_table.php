@@ -22,7 +22,7 @@ class CreateFidelizacionTable extends Migration
       $table->foreignId('idSoporte')->constrained('soporte_tecnico', 'idSoporteTecnico');
       $table->date('fechaInicio');
       $table->date('fechaFin');
-      $table->string('comentario');
+      $table->string('comentario', 255);
       $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->foreignId('idAdministrador')->constrained('administrador', 'idAdministrador');
       $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');

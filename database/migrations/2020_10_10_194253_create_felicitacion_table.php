@@ -16,7 +16,7 @@ class CreateFelicitacionTable extends Migration
   {
     Schema::create('felicitacion', function (Blueprint $table) {
       $table->bigIncrements('idFelicitacion');
-      $table->string('dirigidoA');
+      $table->string('dirigidoA', 100);
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

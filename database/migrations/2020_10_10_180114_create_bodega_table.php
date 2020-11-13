@@ -16,7 +16,7 @@ class CreateBodegaTable extends Migration
   {
     Schema::create('bodega', function (Blueprint $table) {
       $table->bigIncrements('idBodega');
-      $table->string('nombreBodega');
+      $table->string('nombreBodega', 50);
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

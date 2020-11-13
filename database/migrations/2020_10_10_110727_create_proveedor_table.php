@@ -17,11 +17,11 @@ class CreateProveedorTable extends Migration
     Schema::create('proveedor', function (Blueprint $table) {
       $table->bigIncrements('idProveedor');
       $table->foreignId('tipoDoc')->constrained('tipo_doc', 'idTipoDoc');
-      $table->string('numeroDoc');
-      $table->string('digitoVerif');
-      $table->string('razonSocial');
-      $table->string('telefono');
-      $table->string('email');
+      $table->string('numeroDoc', 50);
+      $table->string('digitoVerif', 1);
+      $table->string('razonSocial', 100);
+      $table->string('telefono', 20);
+      $table->string('email', 255);
       $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

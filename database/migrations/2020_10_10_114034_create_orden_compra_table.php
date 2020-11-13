@@ -18,9 +18,9 @@ class CreateOrdenCompraTable extends Migration
       $table->bigIncrements('idOrdenCompra');
       $table->foreignId('idProveedor')->constrained('proveedor', 'idProveedor');
       $table->date('fecha');
-      $table->string('docAsociado');
+      $table->string('docAsociado', 50);
       $table->foreignId('idTRM')->constrained('trm', 'idTRM');
-      $table->double('factorImport');
+      $table->double('factorImport', 5);
       $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

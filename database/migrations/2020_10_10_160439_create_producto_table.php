@@ -16,9 +16,9 @@ class CreateProductoTable extends Migration
   {
     Schema::create('producto', function (Blueprint $table) {
       $table->bigIncrements('idProducto');
-      $table->string('modeloProducto');
-      $table->string('descripcion');
-      $table->double('precioVenta');
+      $table->string('modeloProducto', 100);
+      $table->string('descripcion', 255);
+      $table->double('precioVenta', 11);
       $table->foreignId('idCategoria')->constrained('categorias_producto', 'idCategoria');
       $table->boolean('estado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

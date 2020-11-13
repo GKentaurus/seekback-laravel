@@ -22,7 +22,7 @@ class CreateUsuarioTable extends Migration
       $table->string('sApellido', 50)->nullable();
       $table->foreignId('tipoDoc')->constrained('tipo_doc', 'idTipoDoc');
       $table->string('numeroDoc', 50);
-      $table->string('contrasena');
+      $table->string('contrasena', 255);
       $table->foreignId('rol')->constrained('roles', 'idRol');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

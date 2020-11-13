@@ -17,7 +17,7 @@ class CreatePQRSTable extends Migration
     Schema::create('pqrs', function (Blueprint $table) {
       $table->bigIncrements('idPQRS');
       $table->foreignId('idTipoSolicitud')->constrained('tipo_solicitud', 'idTipoSolicitud');
-      $table->string('area');
+      $table->string('area', 100);
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

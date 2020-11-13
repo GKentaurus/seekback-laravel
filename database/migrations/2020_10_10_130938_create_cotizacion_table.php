@@ -16,7 +16,7 @@ class CreateCotizacionTable extends Migration
   {
     Schema::create('cotizacion', function (Blueprint $table) {
       $table->bigIncrements('idCotizacion');
-      $table->string('requerimiento');
+      $table->string('requerimiento', 255);
       $table->date('fecha');
       $table->date('vencimiento');
       $table->foreignId('idTRM')->constrained('trm', 'idTRM');

@@ -18,7 +18,7 @@ class CreateBodegaProductosTable extends Migration
       $table->bigIncrements('idRegistro');
       $table->foreignId('idBodega')->constrained('bodega', 'idBodega');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
-      $table->bigInteger('cantidad', 11);
+      $table->bigInteger('cantidad');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

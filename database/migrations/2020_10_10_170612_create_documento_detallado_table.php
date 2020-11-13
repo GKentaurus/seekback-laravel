@@ -17,9 +17,9 @@ class CreateDocumentoDetalladoTable extends Migration
     Schema::create('documento_detallado', function (Blueprint $table) {
       $table->bigIncrements('idDetalle');
       $table->string('prefijoDocumento', 10);
-      $table->bigInteger('consecutivo', 11);
+      $table->bigInteger('consecutivo');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
-      $table->bigInteger('cantidad', 11);
+      $table->bigInteger('cantidad');
       $table->double('valorUnitario');  // TODO Revisar limite de datos Double
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

@@ -18,7 +18,7 @@ class CreateProductoTable extends Migration
       $table->bigIncrements('idProducto');
       $table->string('modeloProducto', 100);
       $table->string('descripcion', 255);
-      $table->double('precioVenta', 11);
+      $table->double('precioVenta');
       $table->foreignId('idCategoria')->constrained('categorias_producto', 'idCategoria');
       $table->boolean('estado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

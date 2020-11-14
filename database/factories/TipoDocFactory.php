@@ -23,7 +23,7 @@ class TipoDocFactory extends Factory
   {
     return [
       'sigla' => $this->faker->word(),
-      'nombreDocument' => $this->faker->paragraph(1),
+      'nombreDocumento' => $this->faker->paragraph(1),
     ];
   }
 }

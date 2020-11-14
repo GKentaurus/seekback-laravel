@@ -17,19 +17,19 @@ class TipoDocSeeder extends Seeder
     $documents = [
       [
         'sigla' => 'C.C.',
-        'nombreDocument' => 'Cédula de Ciudadanía',
+        'nombreDocumento' => 'Cédula de Ciudadanía',
       ],
       [
         'sigla' => 'C.E.',
-        'nombreDocument' => 'Cédula de Extranjería',
+        'nombreDocumento' => 'Cédula de Extranjería',
       ],
       [
         'sigla' => 'NIT',
-        'nombreDocument' => 'NIT',
+        'nombreDocumento' => 'NIT',
       ],
       [
         'sigla' => 'PASS',
-        'nombreDocument' => 'Pasaporte',
+        'nombreDocumento' => 'Pasaporte',
       ],
     ];
 

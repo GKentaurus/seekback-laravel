@@ -41,12 +41,19 @@ class CorreosSeeder extends Seeder
 
     foreach ($usuarios as $usuario) {
       if ($usuario->idUsuario > 3) {
+        $correoP = [
+          'idUsuario' => $usuario->idUsuario,
+          'correoElectronico' => "pr_" . $usuario->pNombre . $usuario->pApellido . $usuario->idUsuario . '@example.com',
+          'esPrincipal' => 0
+        ];
+
         $correo = [
           'idUsuario' => $usuario->idUsuario,
           'correoElectronico' => $usuario->pNombre . $usuario->pApellido . $usuario->idUsuario . '@example.com',
           'esPrincipal' => 0
         ];
 
+        Correos::factory()->create($correoP);
         Correos::factory()->create($correo);
       }
     }

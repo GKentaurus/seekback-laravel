@@ -13,7 +13,10 @@ class Calificacion extends Model
   protected $table = 'calificacion';
 
   protected $fillable = [
+    'idCliente',
     'idProducto',
-    'calificacion'
+    'calificacion',
+    'comentario',
+    'esAprobado'
   ];
 }

@@ -21,7 +21,7 @@ class CreateProveedorTable extends Migration
       $table->string('digitoVerif', 1);
       $table->string('razonSocial', 100);
       $table->string('telefono', 20);
-      $table->string('email', 255);
+      $table->string('email');
       $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

@@ -14,6 +14,6 @@ class TipoDoc extends Model
 
   protected $fillable = [
     'sigla',
-    'nombreDocument',
+    'nombreDocumento',
   ];
 }

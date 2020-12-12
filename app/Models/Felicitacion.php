@@ -13,6 +13,8 @@ class Felicitacion extends Model
   protected $table = 'felicitacion';
 
   protected $fillable = [
-    'dirigidoA'
+    'idCliente',
+    'dirigidoA',
+    'comentario',
   ];
 }

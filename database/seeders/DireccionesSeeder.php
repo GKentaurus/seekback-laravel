@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Direcciones;
+use App\Models\Usuario;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class DireccionesSeeder extends Seeder
 {
@@ -15,6 +15,16 @@ class DireccionesSeeder extends Seeder
    */
   public function run()
   {
-    Direcciones::factory()->times(config('seeder.departamento'))->create();
+    $users = Usuario::all($columns = ['idUsuario']);
+    foreach ($users as $value) {
+      Direcciones::factory()->make([
+        'idRegistro' => $value
+      ]);
+
+      Direcciones::factory()->make([
+        'idRegistro' => $value,
+        'esPrincipal' => false
+      ]);
+    }
   }
 }

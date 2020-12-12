@@ -14,6 +14,6 @@ class Departamento extends Model
 
   protected $fillable = [
     'idPais',
-    'nombreDepartament'
+    'nombreDepartamento'
   ];
 }

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Cliente;
+use App\Models\Empleado;
 use App\Models\EstadosFidelizacion;
 use App\Models\Producto;
 use App\Models\SoporteTecnico;
@@ -25,7 +27,11 @@ class SoporteTecnicoFactory extends Factory
   {
     return [
       'idProducto' => $this->faker->numberBetween(1, Producto::all()->count()),
+      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
+      'idEmpleado' => $this->faker->numberBetween(1, Empleado::all()->count()),
+      'comentario' => $this->faker->paragraph(1),
       'idEstado' => $this->faker->numberBetween(1, EstadosFidelizacion::all()->count()),
+      'fechaRespuesta' => $this->faker->boolean(10) ? $this->faker->date() : null,
     ];
   }
 }

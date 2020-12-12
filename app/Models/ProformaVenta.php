@@ -13,7 +13,7 @@ class ProformaVenta extends Model
   protected $table = 'proforma_venta';
 
   protected $fillable = [
-    'cotizacionAsociada',
+    'idCotizacion',
     'fecha',
     'vencimiento',
   ];

@@ -19,7 +19,7 @@ class ProformaVentaSeeder extends Seeder
 
     foreach ($CotAprobadas as $cotizacion) {
       $form = [
-        'cotizacionAsociada' => $cotizacion->idCotizacion,
+        'idCotizacion' => $cotizacion->idCotizacion,
         'fecha' => $cotizacion->fecha,
         'vencimiento' => $cotizacion->vencimiento,
       ];

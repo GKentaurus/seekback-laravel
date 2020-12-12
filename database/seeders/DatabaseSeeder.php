@@ -47,7 +47,6 @@ class DatabaseSeeder extends Seeder
       TipoServicioSeeder::class,
       EstadosAgendaSeeder::class,
       AgendaSeeder::class,
-      FidelizacionSeeder::class
     ]);
   }
 }

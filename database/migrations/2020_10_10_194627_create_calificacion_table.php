@@ -16,8 +16,11 @@ class CreateCalificacionTable extends Migration
   {
     Schema::create('calificacion', function (Blueprint $table) {
       $table->bigIncrements('idCalificacion');
+      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
       $table->tinyInteger('calificacion');
+      $table->string('comentario')->nullable();
+      $table->boolean('esAprobado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->softDeletes();

@@ -22,13 +22,14 @@ class UsuarioFactory extends Factory
   public function definition()
   {
     return [
-      'pNombre' => $this->faker->firstName,
-      'sNombres' => $this->faker->firstName,
-      'pApellido' => $this->faker->lastName,
-      'sApellido' => $this->faker->lastName,
+      'primerNombre' => $this->faker->firstName,
+      'otrosNombres' => $this->faker->firstName,
+      'primerApellido' => $this->faker->lastName,
+      'otrosApellidos' => $this->faker->lastName,
       'tipoDoc' => $this->faker->numberBetween(1, 4),
       'numeroDoc' => $this->faker->numberBetween(10000000, 2000000000),
       'contrasena' => $this->faker->word(),
+      'salt' => $this->faker->word(),
       'rol' => $this->faker->boolean(7) ? 2 : 3,
     ];
   }

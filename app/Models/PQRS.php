@@ -14,7 +14,11 @@ class PQRS extends Model
 
   protected $fillable = [
     'idTipoSolicitud',
+    'idCliente',
+    'idAdministrador',
     'area',
+    'comentario',
     'idEstado',
+    'fechaRespuesta',
   ];
 }

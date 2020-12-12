@@ -16,7 +16,7 @@ class CreateProformaVentaTable extends Migration
   {
     Schema::create('proforma_venta', function (Blueprint $table) {
       $table->bigIncrements('idProforma');
-      $table->foreignId('cotizacionAsociada')->constrained('cotizacion', 'idCotizacion');
+      $table->foreignId('idCotizacion')->constrained('cotizacion', 'idCotizacion');
       $table->date('fecha');
       $table->date('vencimiento');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

@@ -14,6 +14,10 @@ class SoporteTecnico extends Model
 
   protected $fillable = [
     'idProducto',
+    'idCliente',
+    'idEmpleado',
+    'comentario',
     'idEstado',
+    'fechaRespuesta',
   ];
 }

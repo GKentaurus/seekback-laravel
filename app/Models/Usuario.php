@@ -13,15 +13,14 @@ class Usuario extends Model
   protected $table = "usuario";
 
   protected $fillable = [
-    'pNombre',
-    'sNombres',
-    'pApellido',
-    'sApellido',
+    'primerNombre',
+    'otrosNombres',
+    'primerApellido',
+    'otrosApellidos',
     'tipoDoc',
     'numeroDoc',
-    'email',
     'contrasena',
-    'telefPpal',
-    'rol'
+    'salt',
+    'rol',
   ];
 }

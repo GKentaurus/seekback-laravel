@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Cliente;
 use App\Models\Felicitacion;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,9 @@ class FelicitacionFactory extends Factory
   public function definition()
   {
     return [
-      'dirigidoA' => $this->faker->name()
+      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
+      'dirigidoA' => $this->faker->name(),
+      'comentario' => $this->faker->paragraph(1),
     ];
   }
 }

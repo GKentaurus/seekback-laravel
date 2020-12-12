@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Usuario;
 use App\Models\Telefonos;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,16 @@ class TelefonosSeeder extends Seeder
    */
   public function run()
   {
-    Telefonos::factory()->times(config('seeder.telefonos'))->create();
+    $users = Usuario::all($columns = ['idUsuario']);
+    foreach ($users as $value) {
+      Telefonos::factory()->make([
+        'idUsuario' => $value
+      ]);
+
+      Telefonos::factory()->make([
+        'idUsuario' => $value,
+        'esPrincipal' => false
+      ]);
+    }
   }
 }

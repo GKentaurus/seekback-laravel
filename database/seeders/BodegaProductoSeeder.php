@@ -16,11 +16,14 @@ class BodegaProductoSeeder extends Seeder
    */
   public function run()
   {
-    for ($i = 1; $i <= Bodega::all()->count(); $i++) {
-      for ($j = 1; $j <= Producto::all()->count(); $j++) {
+    $productos = Producto::all();
+    $bodegas = Bodega::all();
+
+    foreach ($productos as $producto) {
+      foreach ($bodegas as $bodega) {
         $bodega_producto = [
-          'idBodega' => Bodega::where('idBodega', $i)->first()->idBodega,
-          'idProducto' => Producto::where('idProducto', $i)->first()->idProducto,
+          'idBodega' => $bodega->idBodega,
+          'idProducto' => $producto->idProducto,
           'cantidad' => rand(10, 1000),
         ];
 

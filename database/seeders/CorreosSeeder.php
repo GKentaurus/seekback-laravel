@@ -40,17 +40,24 @@ class CorreosSeeder extends Seeder
     $usuarios = Usuario::all();
 
     foreach ($usuarios as $usuario) {
+      $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      $charactersLength = strlen($characters);
+      $randomString = '';
+      for ($i = 0; $i < 10; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+      }
+
       if ($usuario->idUsuario > 3) {
         $correoP = [
           'idUsuario' => $usuario->idUsuario,
-          'correoElectronico' => "pr_" . $usuario->pNombre . $usuario->pApellido . $usuario->idUsuario . '@example.com',
-          'esPrincipal' => 0
+          'correoElectronico' => "pr_" . $randomString . '@example.com',
+          'esPrincipal' => true
         ];
 
         $correo = [
           'idUsuario' => $usuario->idUsuario,
-          'correoElectronico' => $usuario->pNombre . $usuario->pApellido . $usuario->idUsuario . '@example.com',
-          'esPrincipal' => 0
+          'correoElectronico' => $randomString . '@example.com',
+          'esPrincipal' => false
         ];
 
         Correos::factory()->create($correoP);

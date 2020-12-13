@@ -14,6 +14,20 @@ class TipoSolicitudSeeder extends Seeder
    */
   public function run()
   {
-    TipoSolicitud::factory()->times(config('seeder.tipo_solicitud'))->create();
+    $solicitudes = [
+      [
+        'nombreSolicitud' => 'Petición',
+      ],
+      [
+        'nombreSolicitud' => 'Queja',
+      ],
+      [
+        'nombreSolicitud' => 'Reclamo',
+      ],
+      [
+        'nombreSolicitud' => 'Sugerencia',
+      ],
+    ];
+    TipoSolicitud::factory()->create($solicitudes);
   }
 }

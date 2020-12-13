@@ -27,7 +27,7 @@ class DireccionesFactory extends Factory
       'pseudonimo' => $this->faker->word(),
       'direccion' => $this->faker->address,
       'telefono' => $this->faker->e164PhoneNumber,
-      'esPrincipal' => true,
+      'esPrincipal' => false,
       'localizacion' => $this->faker->numberBetween(1, config('seeder.ciudad')),
     ];
   }

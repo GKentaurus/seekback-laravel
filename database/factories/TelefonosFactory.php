@@ -24,7 +24,7 @@ class TelefonosFactory extends Factory
     return [
       'idUsuario' => $this->faker->numberBetween(1, config('seeder.usuarios')),
       'numeroTelefono' => $this->faker->e164PhoneNumber,
-      'esPrincipal' => true,
+      'esPrincipal' => false,
     ];
   }
 }

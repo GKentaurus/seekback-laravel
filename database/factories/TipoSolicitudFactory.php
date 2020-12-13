@@ -22,7 +22,7 @@ class TipoSolicitudFactory extends Factory
   public function definition()
   {
     return [
-      'nombreSolicitud' => $this->faker->lexify('??????????'),
+      //
     ];
   }
 }

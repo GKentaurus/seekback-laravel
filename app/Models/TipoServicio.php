@@ -11,7 +11,7 @@ class TipoServicio extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'tipo_servicio';
-
+  protected $primaryKey = 'idTipoServicio';
   protected $fillable = [
     'nombreServicio'
   ];

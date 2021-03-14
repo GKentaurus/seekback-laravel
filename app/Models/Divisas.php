@@ -11,7 +11,7 @@ class Divisas extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'divisas';
-
+  protected $primaryKey = 'idDivisa';
   protected $fillable = [
     'nombre',
     'sigla'

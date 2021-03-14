@@ -11,7 +11,7 @@ class Roles extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'roles';
-
+  protected $primaryKey = 'idRol';
   protected $fillable = [
     'nombreRol'
   ];

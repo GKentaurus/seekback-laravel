@@ -23,8 +23,8 @@ class CreateAgendaTable extends Migration
       $table->foreignId('idCliente')->nullable()->constrained('cliente', 'idCliente');
       $table->foreignId('idEmpleado')->nullable()->constrained('empleado', 'idEmpleado');
       $table->foreignId('idAdministrador')->nullable()->constrained('administrador', 'idAdministrador');
-      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+      $table->timestamp('created_at');
+      $table->timestamp('updated_at');
       $table->boolean('deleted')->default(false);
       $table->softDeletes();
     });

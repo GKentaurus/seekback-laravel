@@ -11,7 +11,7 @@ class TRM extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'trm';
-
+  protected $primaryKey = 'idTRM';
   protected $fillable = [
     'idDivisa',
     'fechaTRM',

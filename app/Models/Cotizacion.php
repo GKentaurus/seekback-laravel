@@ -11,7 +11,7 @@ class Cotizacion extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'cotizacion';
-
+  protected $primaryKey = 'idCotizacion';
   protected $fillable = [
     'requerimiento',
     'fecha',

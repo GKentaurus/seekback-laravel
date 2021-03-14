@@ -11,6 +11,6 @@ class Empleado extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'empleado';
-
+  protected $primaryKey = 'idEmpleado';
   protected $fillable = ['idUsuario'];
 }

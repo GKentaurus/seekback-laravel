@@ -23,7 +23,7 @@ class DepartamentoFactory extends Factory
   {
     return [
       'idPais' => $this->faker->numberBetween(1, config('seeder.pais')),
-      'nombreDepartament' => $this->faker->word(),
+      'nombreDepartamento' => $this->faker->word(),
     ];
   }
 }

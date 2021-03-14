@@ -11,7 +11,7 @@ class Felicitacion extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'felicitacion';
-
+  protected $primaryKey = 'idFelicitacion';
   protected $fillable = [
     'idCliente',
     'dirigidoA',

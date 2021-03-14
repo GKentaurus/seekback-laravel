@@ -11,7 +11,7 @@ class EstadosFidelizacion extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'estados_fidelizacion';
-
+  protected $primaryKey = 'idEstado';
   protected $fillable = [
     'nombreEstado'
   ];

@@ -11,6 +11,6 @@ class CategoriasProducto extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'categorias_producto';
-
+  protected $primaryKey = 'idCategoria';
   protected $fillable = ['nombreCategoria'];
 }

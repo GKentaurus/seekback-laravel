@@ -19,8 +19,8 @@ class CreateProformaVentaTable extends Migration
       $table->foreignId('idCotizacion')->constrained('cotizacion', 'idCotizacion');
       $table->date('fecha');
       $table->date('vencimiento');
-      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+      $table->timestamp('created_at');
+      $table->timestamp('updated_at');
       $table->boolean('deleted')->default(false);
       $table->softDeletes();
     });

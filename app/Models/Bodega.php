@@ -11,7 +11,7 @@ class Bodega extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'bodega';
-
+  protected $primaryKey = 'idBodega';
   protected $fillable = [
     'nombreBodega'
   ];

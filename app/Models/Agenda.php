@@ -12,7 +12,7 @@ class Agenda extends Model
   use HasFactory, Notifiable, SoftDeletes;
 
   protected $table = 'agenda';
-
+  protected $primaryKey = 'idAgenda';
   protected $fillable = [
     'fecha',
     'observaciones',

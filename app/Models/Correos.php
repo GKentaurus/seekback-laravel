@@ -12,7 +12,7 @@ class Correos extends Model
   use HasFactory, Notifiable, SoftDeletes;
 
   protected $table = 'correos';
-
+  protected $primaryKey = 'idCorreo';
   protected $fillable = [
     'idUsuario',
     'correoElectronico',

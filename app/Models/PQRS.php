@@ -11,7 +11,7 @@ class PQRS extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'pqrs';
-
+  protected $primaryKey = 'idPQRS';
   protected $fillable = [
     'idTipoSolicitud',
     'idCliente',

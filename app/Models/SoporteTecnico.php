@@ -11,7 +11,7 @@ class SoporteTecnico extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'soporte_tecnico';
-
+  protected $primaryKey = 'idSoporteTecnico';
   protected $fillable = [
     'idProducto',
     'idCliente',

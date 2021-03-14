@@ -11,7 +11,7 @@ class ProformaVenta extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'proforma_venta';
-
+  protected $primaryKey = 'idProforma';
   protected $fillable = [
     'idCotizacion',
     'fecha',

@@ -11,7 +11,7 @@ class OrdenCompra extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'orden_compra';
-
+  protected $primaryKey = 'idOrdenCompra';
   protected $fillable = [
     'idProveedor',
     'fecha',

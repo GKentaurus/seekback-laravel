@@ -11,6 +11,7 @@ class Pais extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = "pais";
+  protected $primaryKey = 'idPais';
 
   protected $fillable = [
     'nombrePais',

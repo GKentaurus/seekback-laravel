@@ -11,7 +11,7 @@ class Direcciones extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'direcciones';
-
+  protected $primaryKey = 'idDirecciones';
   protected $fillable = [
     'idRegistro',
     'pseudonimo',

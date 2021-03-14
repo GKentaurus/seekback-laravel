@@ -11,7 +11,7 @@ class TipoDoc extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'tipo_doc';
-
+  protected $primaryKey = 'idTipoDoc';
   protected $fillable = [
     'sigla',
     'nombreDocumento',

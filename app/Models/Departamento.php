@@ -11,7 +11,7 @@ class Departamento extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'departamento';
-
+  protected $primaryKey = 'idDepartamento';
   protected $fillable = [
     'idPais',
     'nombreDepartamento'

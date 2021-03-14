@@ -11,6 +11,6 @@ class Administrador extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'administrador';
-
+  protected $primaryKey = 'idAdministrador';
   protected $fillable = ['idUsuario'];
 }

@@ -12,7 +12,7 @@ class EstadosAgenda extends Model
   use HasFactory, Notifiable, SoftDeletes;
 
   protected $table = 'estados_agenda';
-
+  protected $primaryKey = 'idEstado';
   protected $fillable = [
     'nombreEstado'
   ];

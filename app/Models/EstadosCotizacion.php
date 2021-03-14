@@ -11,7 +11,7 @@ class EstadosCotizacion extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'estados_cotizacion';
-
+  protected $primaryKey = 'idEstado';
   protected $fillable = [
     'nombreEstado'
   ];

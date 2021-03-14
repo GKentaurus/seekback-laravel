@@ -11,7 +11,7 @@ class DocumentoDetallado extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'documento_detallado';
-
+  protected $primaryKey = 'idDetalle';
   protected $fillable = [
     'prefijoDocumento',
     'consecutivo',

@@ -12,7 +12,7 @@ class Telefonos extends Model
   use HasFactory, Notifiable, SoftDeletes;
 
   protected $table = 'telefonos';
-
+  protected $primaryKey = 'idTelefono';
   protected $fillable = [
     'idUsuario',
     'numeroTelefono',

@@ -11,7 +11,7 @@ class TipoSolicitud extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'tipo_solicitud';
-
+  protected $primaryKey = 'idTipoSolicitud';
   protected $fillable = [
     'nombreSolicitud'
   ];

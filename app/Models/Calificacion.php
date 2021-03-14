@@ -11,7 +11,7 @@ class Calificacion extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'calificacion';
-
+  protected $primaryKey = 'idCalificacion';
   protected $fillable = [
     'idCliente',
     'idProducto',

@@ -11,7 +11,7 @@ class Ciudad extends Model
   use HasFactory, SoftDeletes;
 
   protected $table = 'ciudad';
-
+  protected $primaryKey = 'idCiudad';
   protected $fillable = [
     'idDepartamento',
     'nombreCiudad',

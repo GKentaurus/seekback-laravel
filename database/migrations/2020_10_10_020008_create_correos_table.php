@@ -19,8 +19,8 @@ class CreateCorreosTable extends Migration
       $table->foreignId('idUsuario')->constrained('usuario', 'idUsuario');
       $table->string('correoElectronico', 255)->unique();
       $table->boolean('esPrincipal');
-      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+      $table->timestamp('created_at');
+      $table->timestamp('updated_at');
       $table->boolean('deleted')->default(false);
       $table->softDeletes();
     });

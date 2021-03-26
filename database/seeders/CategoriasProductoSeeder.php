@@ -14,6 +14,24 @@ class CategoriasProductoSeeder extends Seeder
    */
   public function run()
   {
-    CategoriasProducto::factory()->times(config('seeder.categorias_producto'))->create();
+    $categorias = [
+      [
+        'nombreCategoria' => 'Cable',
+      ],
+      [
+        'nombreCategoria' => 'Adaptadores',
+      ],
+      [
+        'nombreCategoria' => 'Equipos inalámbricos',
+      ],
+      [
+        'nombreCategoria' => 'Conmutadores',
+      ],
+    ];
+    // CategoriasProducto::factory()->times(config('seeder.categorias_producto'))->create();
+
+    foreach ($categorias as $categoria) {
+      CategoriasProducto::factory()->create($categoria);
+    }
   }
 }

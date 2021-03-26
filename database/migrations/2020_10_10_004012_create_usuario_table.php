@@ -25,8 +25,8 @@ class CreateUsuarioTable extends Migration
       $table->string('contrasena', 255);
       $table->string('salt', 255);
       $table->foreignId('rol')->constrained('roles', 'idRol');
-      $table->timestamp('created_at');
-      $table->timestamp('updated_at');
+      $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+      $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->boolean('deleted')->default(false);
       $table->softDeletes();
     });

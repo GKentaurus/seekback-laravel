@@ -23,7 +23,7 @@ class ProductoFactory extends Factory
   public function definition()
   {
     return [
-      'modeloProducto' => ($this->faker->word() . $this->faker->word() . $this->faker->word()),
+      'modeloProducto' => ('QP-' . $this->faker->lexify('??') .  $this->faker->numberBetween(100,999) . $this->faker->lexify('???')),
       'descripcion' => $this->faker->paragraph(1),
       'precioVenta' => ($this->faker->numberBetween(10, 300)) * 1000,
       'idCategoria' => $this->faker->numberBetween(1, CategoriasProducto::all()->count()),

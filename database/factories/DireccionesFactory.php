@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Ciudad;
 use App\Models\Direcciones;
 use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -25,10 +26,10 @@ class DireccionesFactory extends Factory
     return [
       'idRegistro' => $this->faker->numberBetween(1, Usuario::all()->count()),
       'pseudonimo' => $this->faker->word(),
-      'direccion' => $this->faker->address,
+      'direccion' => $this->faker->streetAddress,
       'telefono' => $this->faker->e164PhoneNumber,
       'esPrincipal' => false,
-      'localizacion' => $this->faker->numberBetween(1, config('seeder.ciudad')),
+      'localizacion' => $this->faker->numberBetween(1, Ciudad::all()->count()),
     ];
   }
 }

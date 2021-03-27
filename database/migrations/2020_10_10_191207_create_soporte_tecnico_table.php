@@ -17,8 +17,8 @@ class CreateSoporteTecnicoTable extends Migration
     Schema::create('soporte_tecnico', function (Blueprint $table) {
       $table->bigIncrements('idSoporteTecnico');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
-      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
-      $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');
+      $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
+      $table->foreignId('idEmpleado')->constrained('usuario', 'idUsuario');
       $table->string('comentario');
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');
       $table->date('fechaRespuesta')->nullable();

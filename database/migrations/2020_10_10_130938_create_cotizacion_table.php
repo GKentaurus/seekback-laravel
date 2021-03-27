@@ -21,8 +21,8 @@ class CreateCotizacionTable extends Migration
       $table->date('vencimiento');
       $table->foreignId('idTRM')->constrained('trm', 'idTRM');
       $table->foreignId('idEstado')->constrained('estados_cotizacion', 'idEstado');
-      $table->foreignId('idEmpleado')->constrained('empleado', 'idEmpleado');
-      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
+      $table->foreignId('idEmpleado')->constrained('usuario', 'idUsuario');
+      $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->boolean('deleted')->default(false);

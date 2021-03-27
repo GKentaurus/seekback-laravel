@@ -16,7 +16,7 @@ class CreateFelicitacionTable extends Migration
   {
     Schema::create('felicitacion', function (Blueprint $table) {
       $table->bigIncrements('idFelicitacion');
-      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
+      $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->string('dirigidoA', 100);
       $table->string('comentario')->nullable();
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

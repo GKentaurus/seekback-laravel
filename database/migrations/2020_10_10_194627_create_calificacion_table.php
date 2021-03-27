@@ -16,7 +16,7 @@ class CreateCalificacionTable extends Migration
   {
     Schema::create('calificacion', function (Blueprint $table) {
       $table->bigIncrements('idCalificacion');
-      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
+      $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
       $table->tinyInteger('calificacion');
       $table->string('comentario')->nullable();

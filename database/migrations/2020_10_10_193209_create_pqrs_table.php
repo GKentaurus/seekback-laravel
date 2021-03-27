@@ -17,8 +17,8 @@ class CreatePQRSTable extends Migration
     Schema::create('pqrs', function (Blueprint $table) {
       $table->bigIncrements('idPQRS');
       $table->foreignId('idTipoSolicitud')->constrained('tipo_solicitud', 'idTipoSolicitud');
-      $table->foreignId('idCliente')->constrained('cliente', 'idCliente');
-      $table->foreignId('idAdministrador')->constrained('administrador', 'idAdministrador');
+      $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
+      $table->foreignId('idAdministrador')->constrained('usuario', 'idUsuario');
       $table->string('area', 100);
       $table->string('comentario');
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');

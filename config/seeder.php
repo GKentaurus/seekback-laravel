@@ -5,7 +5,7 @@ return [
    * ANCHOR Constantes para los Database Seeders
    * $numberFactories => integer
    */
-  'usuarios' => 5,
+  'usuarios' => 2,
   'tipo_doc' => 0,
   'roles' => 0,
   'direcciones' => 6,
@@ -20,7 +20,7 @@ return [
   'categorias_producto' => 5,
   'producto' => 50,
   'documento_detallado' => 10,
-  'bodega' => 1,
+  'bodega' => 0,
   'estados_fidelizacion' => 0,
   'soporte_tecnico' => 1,
   'tipo_solicitud' => 0,

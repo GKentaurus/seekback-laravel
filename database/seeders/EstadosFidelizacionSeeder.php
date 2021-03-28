@@ -22,7 +22,7 @@ class EstadosFidelizacionSeeder extends Seeder
         'nombreEstado' => 'En revisión',
       ],
       [
-        'nombreEstado' => 'Respondido',
+        'nombreEstado' => 'Resuelto',
       ],
     ];
 

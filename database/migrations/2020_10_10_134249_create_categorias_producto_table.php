@@ -17,6 +17,7 @@ class CreateCategoriasProductoTable extends Migration
     Schema::create('categorias_producto', function (Blueprint $table) {
       $table->bigIncrements('idCategoria');
       $table->string('nombreCategoria', 50);
+      $table->string('faIcon', 50)->nullable();
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->boolean('deleted')->default(false);

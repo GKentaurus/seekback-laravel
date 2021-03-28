@@ -18,17 +18,17 @@ class CorreosSeeder extends Seeder
     $correos = [
       [
         'idUsuario' => 1,
-        'correoElectronico' => 'veronica@example.org',
+        'correoElectronico' => 'carlos.moreno@metasysco.com',
         'esPrincipal' => true,
       ],
       [
         'idUsuario' => 2,
-        'correoElectronico' => 'danniela@example.org',
+        'correoElectronico' => 'danny94rh@gmail.com',
         'esPrincipal' => true,
       ],
       [
         'idUsuario' => 3,
-        'correoElectronico' => 'carlos@example.org',
+        'correoElectronico' => 'camorenoc@outlook.com',
         'esPrincipal' => true,
       ],
     ];

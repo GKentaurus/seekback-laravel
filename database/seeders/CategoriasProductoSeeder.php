@@ -16,16 +16,32 @@ class CategoriasProductoSeeder extends Seeder
   {
     $categorias = [
       [
-        'nombreCategoria' => 'Cable',
+        'nombreCategoria' => 'Accesorios',
+        'faIcon' => 'fab fa-usb'
       ],
       [
-        'nombreCategoria' => 'Adaptadores',
+        'nombreCategoria' => 'Cables',
+        'faIcon' => 'fas fa-network-wired'
       ],
       [
-        'nombreCategoria' => 'Equipos inalámbricos',
+        'nombreCategoria' => 'Herramientas',
+        'faIcon' => 'fas fa-tools'
       ],
       [
-        'nombreCategoria' => 'Conmutadores',
+        'nombreCategoria' => 'Inalámbricos',
+        'faIcon' => 'fas fa-wifi'
+      ],
+      [
+        'nombreCategoria' => 'Switches',
+        'faIcon' => 'fas fa-server'
+      ],
+      [
+        'nombreCategoria' => 'Switches Administrables',
+        'faIcon' => 'fas fa-desktop'
+      ],
+      [
+        'nombreCategoria' => 'Fibra óptica',
+        'faIcon' => 'fa fa-random'
       ],
     ];
     // CategoriasProducto::factory()->times(config('seeder.categorias_producto'))->create();

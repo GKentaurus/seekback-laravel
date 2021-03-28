@@ -16,10 +16,10 @@ class UsuarioSeeder extends Seeder
   {
     $users = [
       [
-        'primerNombre' => 'Veronica',
-        'otrosNombres' => 'Maria',
-        'primerApellido' => 'Ortiz',
-        'otrosApellidos' => 'Rocha',
+        'primerNombre' => 'Carlos',
+        'otrosNombres' => 'Alberto',
+        'primerApellido' => 'Moreno',
+        'otrosApellidos' => 'Cifuentes',
         'tipoDoc' => 1,
         'numeroDoc' => '1019111222',
         'contrasena' => '123',
@@ -38,10 +38,10 @@ class UsuarioSeeder extends Seeder
         'rol' => 2,
       ],
       [
-        'primerNombre' => 'Carlos',
-        'otrosNombres' => 'Alberto',
+        'primerNombre' => 'Camilo',
+        'otrosNombres' => 'Andres',
         'primerApellido' => 'Moreno',
-        'otrosApellidos' => 'Cifuentes',
+        'otrosApellidos' => 'Castro',
         'tipoDoc' => 1,
         'numeroDoc' => '1021111222',
         'contrasena' => '789',

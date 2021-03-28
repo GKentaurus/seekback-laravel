@@ -6,6 +6,7 @@ use App\Models\Empleado;
 use App\Models\OrdenCompra;
 use App\Models\Proveedor;
 use App\Models\TRM;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OrdenCompraFactory extends Factory
@@ -30,7 +31,7 @@ class OrdenCompraFactory extends Factory
       'docAsociado' => $this->faker->word(),
       'idTRM' => $this->faker->numberBetween(1, TRM::all()->count()),
       'factorImport' => 1.10,
-      'idEmpleado' => $this->faker->numberBetween(1, Empleado::all()->count()),
+      'idEmpleado' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 2)->count()),
     ];
   }
 }

@@ -20,7 +20,8 @@ class CreatePQRSTable extends Migration
       $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->foreignId('idAdministrador')->constrained('usuario', 'idUsuario');
       $table->string('area', 100);
-      $table->string('comentario');
+      $table->text('comentario');
+      $table->text('respuesta')->nullable();
       $table->foreignId('idEstado')->constrained('estados_fidelizacion', 'idEstado');
       $table->date('fechaRespuesta')->nullable();
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

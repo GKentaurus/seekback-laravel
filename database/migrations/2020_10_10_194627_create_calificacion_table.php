@@ -19,7 +19,7 @@ class CreateCalificacionTable extends Migration
       $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->foreignId('idProducto')->constrained('producto', 'idProducto');
       $table->tinyInteger('calificacion');
-      $table->string('comentario')->nullable();
+      $table->text('comentario')->nullable();
       $table->boolean('esAprobado');
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

@@ -17,7 +17,7 @@ class CreateAgendaTable extends Migration
     Schema::create('agenda', function (Blueprint $table) {
       $table->bigIncrements('idAgenda');
       $table->date('fecha');
-      $table->string('observaciones', 255);
+      $table->text('observaciones');
       $table->foreignId('idEstado')->constrained('estados_agenda', 'idEstado');
       $table->foreignId('idTipoServicio')->constrained('tipo_servicio', 'idTipoServicio');
       $table->foreignId('idCliente')->nullable()->constrained('usuario', 'idUsuario');

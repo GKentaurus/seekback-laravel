@@ -7,6 +7,7 @@ use App\Models\Cliente;
 use App\Models\Administrador;
 use App\Models\TipoSolicitud;
 use App\Models\EstadosFidelizacion;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PQRSFactory extends Factory
@@ -27,8 +28,8 @@ class PQRSFactory extends Factory
   {
     return [
       'idTipoSolicitud' => $this->faker->numberBetween(1, TipoSolicitud::all()->count()),
-      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
-      'idAdministrador' => $this->faker->numberBetween(1, Administrador::all()->count()),
+      'idCliente' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 3)->count()),
+      'idAdministrador' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 1)->count()),
       'area' => $this->faker->name(),
       'comentario' => $this->faker->paragraph(1),
       'idEstado' => $this->faker->numberBetween(1, EstadosFidelizacion::all()->count()),

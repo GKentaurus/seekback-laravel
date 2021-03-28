@@ -12,5 +12,5 @@ class CategoriasProducto extends Model
 
   protected $table = 'categorias_producto';
   protected $primaryKey = 'idCategoria';
-  protected $fillable = ['nombreCategoria'];
+  protected $fillable = ['nombreCategoria', 'faIcon'];
 }

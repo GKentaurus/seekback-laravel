@@ -8,6 +8,7 @@ use App\Models\Cliente;
 use App\Models\Empleado;
 use App\Models\EstadosAgenda;
 use App\Models\TipoServicio;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AgendaFactory extends Factory
@@ -31,9 +32,9 @@ class AgendaFactory extends Factory
       'observaciones' => $this->faker->paragraph(1),
       'idEstado' => $this->faker->numberBetween(1, EstadosAgenda::all()->count()),
       'idTipoServicio' => $this->faker->numberBetween(1, TipoServicio::all()->count()),
-      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
-      'idEmpleado' => $this->faker->numberBetween(1, Empleado::all()->count()),
-      'idAdministrador' => $this->faker->numberBetween(1, Administrador::all()->count()),
+      'idCliente' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 3)->count()),
+      'idEmpleado' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 2)->count()),
+      'idAdministrador' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 1)->count()),
     ];
   }
 }

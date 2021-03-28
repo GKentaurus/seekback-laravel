@@ -18,7 +18,7 @@ class CreateFelicitacionTable extends Migration
       $table->bigIncrements('idFelicitacion');
       $table->foreignId('idCliente')->constrained('usuario', 'idUsuario');
       $table->string('dirigidoA', 100);
-      $table->string('comentario')->nullable();
+      $table->text('comentario')->nullable();
       $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
       $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
       $table->boolean('deleted')->default(false);

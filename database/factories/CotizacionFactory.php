@@ -7,6 +7,7 @@ use App\Models\Cliente;
 use App\Models\Empleado;
 use App\Models\EstadosCotizacion;
 use App\Models\TRM;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CotizacionFactory extends Factory
@@ -31,8 +32,8 @@ class CotizacionFactory extends Factory
       'vencimiento' => $this->faker->date(),
       'idTRM' => $this->faker->numberBetween(1, TRM::all()->count()),
       'idEstado' => $this->faker->numberBetween(1, EstadosCotizacion::all()->count()),
-      'idEmpleado' => $this->faker->numberBetween(1, Empleado::all()->count()),
-      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
+      'idEmpleado' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 2)->count()),
+      'idCliente' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 3)->count()),
     ];
   }
 }

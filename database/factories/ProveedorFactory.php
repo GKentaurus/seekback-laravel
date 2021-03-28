@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Cliente;
 use App\Models\Proveedor;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProveedorFactory extends Factory
@@ -29,7 +30,7 @@ class ProveedorFactory extends Factory
       'razonSocial' => $this->faker->name(),
       'telefono' => $this->faker->e164PhoneNumber,
       'email' => $this->faker->safeEmail,
-      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
+      'idCliente' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 3)->count()),
     ];
   }
 }

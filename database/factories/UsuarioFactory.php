@@ -28,7 +28,7 @@ class UsuarioFactory extends Factory
       'otrosApellidos' => $this->faker->lastName,
       'tipoDoc' => $this->faker->numberBetween(1, 4),
       'numeroDoc' => $this->faker->numberBetween(10000000, 2000000000),
-      'contrasena' => $this->faker->word(),
+      'contrasena' => 'asd',
       'salt' => $this->faker->word(),
       'rol' => $this->faker->boolean(7) ? 2 : 3,
     ];

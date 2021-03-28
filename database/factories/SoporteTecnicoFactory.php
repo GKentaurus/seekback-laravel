@@ -7,6 +7,7 @@ use App\Models\Empleado;
 use App\Models\EstadosFidelizacion;
 use App\Models\Producto;
 use App\Models\SoporteTecnico;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SoporteTecnicoFactory extends Factory
@@ -27,8 +28,8 @@ class SoporteTecnicoFactory extends Factory
   {
     return [
       'idProducto' => $this->faker->numberBetween(1, Producto::all()->count()),
-      'idCliente' => $this->faker->numberBetween(1, Cliente::all()->count()),
-      'idEmpleado' => $this->faker->numberBetween(1, Empleado::all()->count()),
+      'idCliente' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 3)->count()),
+      'idEmpleado' => $this->faker->numberBetween(1, Usuario::all()->where('rol', 2)->count()),
       'comentario' => $this->faker->paragraph(1),
       'idEstado' => $this->faker->numberBetween(1, EstadosFidelizacion::all()->count()),
       'fechaRespuesta' => $this->faker->boolean(10) ? $this->faker->date() : null,
